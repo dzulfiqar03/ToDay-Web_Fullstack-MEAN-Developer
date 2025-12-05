@@ -17,7 +17,7 @@ app.use(express.json());
 
 
 app.use(cors({
-  origin: "http://localhost:4200",
+  origin: ["http://localhost:4200", "https://today-meanwebapp.netlify.app"],
   methods: "GET,POST,PUT,DELETE,OPTIONS",
   allowedHeaders: "Content-Type, Authorization",
   credentials: true
