@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const uri = 'process.env.MONGODB_URI';
+const uri = process.env.MONGODB_URI;
 const {Provider} = require('../models/provider');
 const { Users } = require('../models/users');
 const { Todo } = require('../models/todo');
