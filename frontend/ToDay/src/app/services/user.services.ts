@@ -6,7 +6,8 @@ import { Observable } from 'rxjs';
 export class UserService {
 
 
-  private apiUrl = 'http://127.0.0.1:3000/api'; // sesuaikan dengan backend kamu
+private apiUrl = 'https://today-webfullstack-mean-developer-production.up.railway.app/api';
+
 
   constructor(private http: HttpClient) { }
   getUsers() {
