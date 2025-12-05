@@ -24,7 +24,7 @@ import { RouterModule } from '@angular/router';
 
         <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
           <a
-            href="/tasks"
+            href="/login"
             class="px-8 py-3 bg-white text-blue-700 font-semibold rounded-md shadow hover:bg-gray-100 transition"
           >
             Mulai Gunakan
@@ -42,7 +42,7 @@ import { RouterModule } from '@angular/router';
       <!-- ILLUSTRATION -->
       <div class="flex justify-center">
         <img
-          src="https://cdn.jsdelivr.net/gh/edent/SuperTinyIcons/images/svg/todo.svg"
+          src="https://img.freepik.com/free-vector/students-employees-adding-events-deadlines-calendar-app-young-people-using-time-organizer-planner-flat-illustration_74855-20735.jpg?semt=ais_hybrid&w=740&q=80"
           alt="Todo Illustration"
           class="w-72 lg:w-96 drop-shadow-xl"
         />

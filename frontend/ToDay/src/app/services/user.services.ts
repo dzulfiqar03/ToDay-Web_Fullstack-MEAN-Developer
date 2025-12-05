@@ -8,37 +8,44 @@ export class UserService {
 
   private apiUrl = 'http://127.0.0.1:3000/api'; // sesuaikan dengan backend kamu
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
   getUsers() {
     return this.http.get(`${this.apiUrl}/providers`);
   }
 
 
-    // Untuk login (baru)
+  // Untuk login (baru)
   postLogin(email: string, password: string): Observable<any> {
     return this.http.post(`${this.apiUrl}/userLogin`, { email, password });
   }
 
-  postUsers(name:string,email:string, password:string, roles:string){
+  postUsers(name: string, email: string, password: string, roles: string) {
     return this.http.post(`${this.apiUrl}/userRegister`, {
-      name : name,
-      email:email,
-      password:password,
-      roles:roles
+      name: name,
+      email: email,
+      password: password,
+      roles: roles
     });
   }
 
-    postTodo(data: any){
-    return this.http.post(`${this.apiUrl}/todoCreate`,data);
+  postCS(name: string, email: string, message: string) {
+    return this.http.post(`${this.apiUrl}/csCreate`, {
+      name: name,
+      email: email,
+      message: message
+    });
+  }
+
+  postTodo(data: any) {
+    return this.http.post(`${this.apiUrl}/todoCreate`, data);
   }
 
 
-getTodoByUserId(id: string) {
-  return this.http.get(`${this.apiUrl}/todo/${id}`);
-}
+  getTodoByUserId(id: string) {
+    return this.http.get(`${this.apiUrl}/todo/${id}`);
+  }
 
-deleteTodo(id: string) {
-  return this.http.delete(`${this.apiUrl}/todo/${id}`);
+  deleteTodo(id: string) {
+    return this.http.delete(`${this.apiUrl}/todo/${id}`);
+  }
 }
-}
-    

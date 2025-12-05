@@ -4,6 +4,7 @@ const mainController = require("../controllers/main.controllers");
 const userController = require("../controllers/user.controllers");
 
 const todoController = require("../controllers/todo.controllers");
+const csController = require("../controllers/cs.controllers");
 
 router.get("/", (req, res) => {
   res.json({ message: "API OK" });
@@ -30,6 +31,7 @@ router.get("/todo/:id", todoController.readOne);
 router.put("/todo/:id", todoController.update);
 router.delete("/todo/:id", todoController.delete);
 
+router.post("/csCreate", csController.create);
 
 
 module.exports = router;

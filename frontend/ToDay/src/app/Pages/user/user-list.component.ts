@@ -11,7 +11,7 @@ import { UserService } from '../../services/user.services';
 
 @Component({
   selector: 'app-user-list',
-  
+
   standalone: true,
   imports: [
     CommonModule,

@@ -23,11 +23,7 @@ import { Router, RouterModule } from '@angular/router';
       class="flex flex-col lg:flex-row lg:space-x-6 text-white font-medium"
      
     >
-      <li><a class="py-2 hover:text-yellow-300" routerLink="/">Home</a></li>
-      <li><a class="py-2 hover:text-yellow-300" routerLink="/tasks">Tasks</a></li>
-      <li><a class="py-2 hover:text-yellow-300" href="#about">About</a></li>
-      <li><a class="py-2 hover:text-yellow-300" href="#services">Services</a></li>
-      <li><a class="py-2 hover:text-yellow-300" href="#contact">Contact</a></li>
+     
         <!-- Tampilkan hanya jika user belum login -->
       <ng-container *ngIf="!isLoggedIn">
         <li><a class="py-2 hover:text-yellow-300" routerLink="/login">Login</a></li>
@@ -36,6 +32,11 @@ import { Router, RouterModule } from '@angular/router';
 
       <!-- Tampilkan jika user sudah login -->
       <ng-container *ngIf="isLoggedIn">
+       <li><a class="py-2 hover:text-yellow-300" routerLink="/">Home</a></li>
+      <li><a class="py-2 hover:text-yellow-300" routerLink="/tasks">Tasks</a></li>
+      <li><a class="py-2 hover:text-yellow-300" href="#about">About</a></li>
+      <li><a class="py-2 hover:text-yellow-300" href="#services">Services</a></li>
+      <li><a class="py-2 hover:text-yellow-300" href="#contact">Contact</a></li>
         <li>
           <a class="py-2 hover:text-yellow-300 cursor-pointer" (click)="logout()">
             Logout

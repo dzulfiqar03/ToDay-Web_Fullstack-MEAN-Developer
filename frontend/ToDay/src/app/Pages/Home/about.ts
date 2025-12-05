@@ -30,12 +30,7 @@ import { RouterModule } from '@angular/router';
             Jelajahi Fitur
           </a>
 
-          <a
-            href="/tasks"
-            class="px-6 py-3 bg-white text-blue-600 font-semibold rounded-md shadow hover:bg-gray-100 transition"
-          >
-            Lihat Daftar Tugas
-          </a>
+      
         </div>
 
       </div>
