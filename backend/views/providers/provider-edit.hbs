@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 class="mb-4 text-center">Edit providers</h1>
+
+<form id="editProviderForm{{providers.id}}" action="/providers/update/{{providers.id}}" method="POST" class="card p-4 shadow-sm rounded">
+  <div class="mb-3">
+    <label for="name{{providers.id}}" class="form-label">Name</label>
+    <input type="text" class="form-control" id="name{{providers.id}}" name="name" value="{{providers.name}}" required>
+  </div>
+
+  <div class="mb-3">
+    <label for="email{{providers.id}}" class="form-label">Email</label>
+    <input type="email" class="form-control" id="email{{providers.id}}" name="email" value="{{providers.email}}" required>
+  </div>
+
+  <div class="mb-3">
+    <label for="phone{{providers.id}}" class="form-label">Phone</label>
+    <input type="text" class="form-control" id="phone{{providers.id}}" name="phone" value="{{providers.phone}}">
+  </div>
+
+  <div class="mb-3">
+    <label for="address{{providers.id}}" class="form-label">Address</label>
+    <textarea class="form-control" id="address{{providers.id}}" name="address" rows="3">{{providers.address}}</textarea>
+  </div>
+
+  <!-- Tombol trigger modal -->
+  <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#confirmEditModal{{providers.id}}">
+    Save Changes
+  </button>
+</form>
+
+
+
+
+  {{> modal
+    id=(concat 'confirmEditModal' providers.id)
+    idNumber=providers.id
+    title="Confirm Edit"
+    body=(concat "Are you sure you want to update " providers.name "?")
+    showCancel=true
+    showSubmit=true
+    submitText="Yes, Save"
+  }}
+
+
+</body>
+</html>
