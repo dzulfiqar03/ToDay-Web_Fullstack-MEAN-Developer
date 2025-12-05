@@ -1,0 +1,66 @@
+<!-- Modal -->
+<div
+  class="modal fade"
+  id="{{id}}"
+  tabindex="-1"
+  aria-labelledby="{{id}}Label"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content shadow-lg rounded-4 border-0">
+      <div class="modal-header bg-primary text-white rounded-top-4">
+        <h5 class="modal-title" id="{{id}}Label">{{title}}</h5>
+        <button
+          type="button"
+          class="btn-close btn-close-white"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        {{{body}}}
+        <!-- Body dinamis: form atau konten lain -->
+      </div>
+      <div class="modal-footer">
+        {{#if showCancel}}
+          <button
+            type="button"
+            class="btn btn-secondary"
+            data-bs-dismiss="modal"
+          >Cancel</button>
+        {{/if}}
+        {{#if showSubmit}}
+          {{#ifContains currentRoute "/providers"}}
+            {{! Halaman ADD }}
+            <button
+              onclick="document.getElementById('addProviderForm').submit()"
+              class="btn btn-warning"
+            >
+              {{submitText}}
+            </button>
+
+          {{else}}
+
+            {{#ifContains currentRoute "/providers/edit"}}
+              {{! Halaman EDIT }}
+              <button
+                onclick="document.getElementById('editProviderForm{{idNumber}}').submit()"
+                class="btn btn-warning"
+              >
+                {{submitText}}
+              </button>
+
+            {{else}}
+              {{! Halaman LIST }}
+              <a href="{{link}}" class="btn btn-warning">{{btnText}}</a>
+
+            {{/ifContains}}
+
+          {{/ifContains}}
+
+        {{/if}}
+
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,64 @@
+{
+  "name": "to-day",
+  "version": "0.0.0",
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build",
+    "watch": "ng build --watch --configuration development",
+    "test": "ng test",
+    "serve:ssr:ToDay": "node dist/ToDay/server/server.mjs"
+  },
+  "prettier": {
+    "printWidth": 100,
+    "singleQuote": true,
+    "overrides": [
+      {
+        "files": "*.html",
+        "options": {
+          "parser": "angular"
+        }
+      }
+    ]
+  },
+  "private": true,
+  "packageManager": "npm@10.8.2",
+  "dependencies": {
+    "@angular/cdk": "^21.0.0",
+    "@angular/common": "^21.0.0",
+    "@angular/compiler": "^21.0.0",
+    "@angular/core": "^21.0.0",
+    "@angular/forms": "^21.0.0",
+    "@angular/material": "^21.0.0",
+    "@angular/platform-browser": "^21.0.0",
+    "@angular/platform-server": "^21.0.0",
+    "@angular/router": "^21.0.0",
+    "@angular/ssr": "^21.0.0",
+    "ag-grid-angular": "^34.3.1",
+    "ag-grid-community": "^34.3.1",
+    "angular-datatables": "^17.0.0",
+    "bcrypt": "^6.0.0",
+    "datatables.net": "^2.3.5",
+    "datatables.net-bs5": "^2.3.5",
+    "datatables.net-dt": "^2.3.5",
+    "datatables.net-responsive-bs5": "^3.0.7",
+    "express": "^5.1.0",
+    "jquery": "^3.7.1",
+    "rxjs": "~7.8.0",
+    "tslib": "^2.3.0"
+  },
+  "devDependencies": {
+    "@angular/build": "^21.0.0",
+    "@angular/cli": "^21.0.0",
+    "@angular/compiler-cli": "^21.0.0",
+    "@tailwindcss/postcss": "^4.1.12",
+    "@types/express": "^5.0.1",
+    "@types/node": "^20.17.19",
+    "autoprefixer": "^10.4.20",
+    "jsdom": "^27.1.0",
+    "postcss": "^8.4.31",
+    "tailwindcss": "^3.4.10",
+    "typescript": "~5.9.2",
+    "vitest": "^4.0.8"
+  }
+}

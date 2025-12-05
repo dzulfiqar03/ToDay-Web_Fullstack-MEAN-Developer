@@ -1,0 +1,17 @@
+const mongoose = require('mongoose');
+
+const companySchema = new mongoose.Schema({
+    "name": { type: String, required: true },
+    "address": { type: String, required: true },
+    "email": { type: String, required: true },
+    "phone": { type: String, required: true }
+});
+const providerSchema = new mongoose.Schema({
+    "name": { type: String, required: true },
+    "address": { type: String, required: true },
+    "email": { type: String, required: true },
+    "company": companySchema,
+    createdAt: { type: Date, default: Date.now }
+});
+
+module.exports = {providerSchema, companySchema};
